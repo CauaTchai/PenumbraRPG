@@ -1,4 +1,89 @@
 {
-    "Actor":{},
-    "Item":{}
+  "Actor": {
+    "types": [
+      "personagem"
+    ],
+    "templates": {
+      "base": {
+        "hp": { "value": 0, "max": 0, "temp": 0 },
+        "iniciativa": { "value": 0, "bonus": 0 },
+        "sanidade":{"value": 0, "max": 0},
+        "ca":{"value":0}
+      }
+    },
+    "personagem": {
+      "templates": ["base"],
+      "detalhes": {
+        "nivel": { "value": 0 },
+        "biografia": ""
+      },
+      "atributos": {
+        "forca": { "value": 0},
+        "destreza": { "value": 0},
+        "vigor": { "value": 0},
+        "presença": { "value": 0},
+        "vontade": { "value": 0},
+        "inteligencia": { "value": 0},
+        "sabedoria": { "value": 0},
+        "sorte": { "value": 0},
+        "movimento": { "value": 0}
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "arma",
+      "classe",
+      "subclasse",
+      "habilidade",
+      "heranca",
+      "encantamento",
+      "equipamento"
+    ],
+    "templates": {
+      "comum": {
+        "descricao": "",
+        "fonte": ""
+      }
+    },
+    "arma": {
+      "templates": ["comum"],
+      "dano": "",
+      "tipoDano": "",
+      "peso": 0,
+      "distancia": "",
+      "pericia": "",
+      "critico": ""
+    },
+    "classe": {
+      "templates": ["comum"],
+      "nivel": { "value": 1 },
+      "dadoVida": "",
+      "periciasDeClasse": ""
+    },
+    "habilidade": {
+      "templates": ["comum"],
+      "custo": { "value": 0, "tipo": "" },
+      "acao": "",
+      "requisito": ""
+    },
+    "encantamento": {
+      "templates": ["comum"],
+      "selo": { "value": 1 },
+      "escola": "",
+      "componentes": "V, S",
+      "duracao": "instantaneo"
+    },
+    "heranca": {
+      "templates": ["comum"],
+      "origem": "",
+      "bonusAtributo": ""
+    },
+    "equipamento": {
+      "templates": ["comum"],
+      "quantidade": 1,
+      "peso": 0,
+      "preco": 0
+    }
+  }
 }

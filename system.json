@@ -1,27 +1,27 @@
 {
-    "name":"PenumbraRPG",
-    "title":"Penumbra",
+    "id": "penumbrarpg",
+    "title": "Penumbra",
     "description": "Sistema para jogar Penumbra no FoundryVTT",
     "author": "Tchai",
     "version": "5.1.2",
     "compatibility": {
-        "minimum": "13.347",
+        "minimum": "13",
         "verified": "13"
     },
-    "esmodules":[
+    "esmodules": [
         "penumbra.js"
     ],
-    "styles":[
+    "styles": [
         "penumbra.css"
     ],
-    "packs":[
-
-    ],
-    "languages":[
-
-    ],
+    "documentTypes": {
+        "Actor": ["personagem", "npc"],
+        "Item": ["classe", "poder", "heranca", "magia", "equipamento"]
+    },
+    "packs": [],
+    "languages": [],
     "gridDistance": 1.5,
     "gridUnits": "m",
-    "primaryTokenAttribute":"attributes.hp",
-    "initiative": "1d20 + @speed"
+    "primaryTokenAttribute": "system.attributes.hp",
+    "initiative": "1d20 + @system.attributes.agilidade"
 }
